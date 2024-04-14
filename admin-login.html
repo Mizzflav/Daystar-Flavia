@@ -6,48 +6,90 @@
     <title>Admin Login</title>
     <link rel="stylesheet" href="daystar.css">
     <style>
-        /* CSS for centering the login form and background image */
-        body, html {
-            height: 80%;
+        /* Paste the provided CSS code here */
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 0;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-image: url('pencil canvas.avif'); 
-            background-size: cover;
-            background-position: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        .login-form {
-            width: 250px;
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .card {
+            background-color: #fff;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); 
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .forgot-password {
-            text-align: right;
-            margin-top: 10px;
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease-in-out;
+            outline: none;
+            color: #333;
+        }
+
+        input:focus {
+            border-color: #555;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="login-form">
-        <h2>Admin</h2>
-        <form id="admin-login-form">
-            <input type="text" id="admin-username" placeholder=" Username">
-            <input type="password" id="admin-password" placeholder="Password">
-            <button type="submit">Login</button>
-            <div class="forgot-password">
-                <a href="forgot-password.html">Forgot Password?</a>
-            </div>
-        </form>
+    <div class="container">
+        <div class="card">
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <input type="text" id="admin-username" name="admin-username" placeholder="Admin Username" required>
+                <input type="password" id="admin-password" name="admin-password" placeholder="Admin Password" required>
+                <button type="submit">Login</button>
+                <div class="forgot-password">
+                    <a href="forgot-password.html">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <!-- You can include any additional JavaScript files or scripts here -->
     <script src="daystar.js"></script>
     <script>
-      
+        // JavaScript code for handling admin login functionality
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('admin-login-form').addEventListener('submit', function(event) {
-                event.preventDefault(); 
+                event.preventDefault(); // Prevent form submission
                // Get the values entered by the user
         var username = document.getElementById('admin-username').value;
         var password = document.getElementById('admin-password').value;
@@ -62,7 +104,9 @@
         }
     });
 });
+        
     </script>
 </body>
 </html>
+
 

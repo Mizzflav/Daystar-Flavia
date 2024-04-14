@@ -3,66 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>User Login</title>
     <link rel="stylesheet" href="daystar.css">
     <style>
-        /* CSS for centering the login form and background image */
-        body, html {
-            height: 80%;
+        /* Paste the provided CSS code here */
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 0;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-image: url('pencil canvas.avif');
-            background-size: cover;
-            background-position: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        .login-form {
-            width: 250px;
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .card {
+            background-color: #fff;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); 
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .forgot-password {
-            text-align: right;
-            margin-top: 10px;
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease-in-out;
+            outline: none;
+            color: #333;
+        }
+
+        input:focus {
+            border-color: #555;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="login-form">
-        <h2>Staff</h2>
-        <form id="admin-login-form">
-            <input type="text" id="admin-username" placeholder="Username">
-            <input type="password" id="admin-password" placeholder="Password">
-            <button type="submit">Login</button>
-            <div class="forgot-password">
-                <a href="forgot-password.html">Forgot Password?</a>
-            </div>
-        </form>
+    <div class="container">
+        <div class="card">
+            <h2>User Login</h2>
+            <form id="user-login-form">
+                <input type="text" id="user-username" name="user-username" placeholder="User Username" required>
+                <input type="password" id="user-password" name="user-password" placeholder="User Password" required>
+                <button type="submit">Login</button>
+                <div class="forgot-password">
+                    <a href="forgot-password.html">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <!-- You can include any additional JavaScript files or scripts here -->
     <script src="daystar.js"></script>
     <script>
         // JavaScript code for handling admin login functionality
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('user-login-form').addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent form submission
-                //adding my dummy data information for authentication
-        var username = document.getElementById('user-username').value;
-        var password = document.getElementById('user-password').value;
+                // Dummy data for authentication
+        const dummyData = {
+            username: 'MizzFlav',
+            password: '1234567'
+        };
 
-        // Simulate authentication with dummy data
-        if (username === 'Flavia' && password === '123456') {
+        // Retrieve the entered username and password from the form
+        const username = document.getElementById('user-username').value;
+        const password = document.getElementById('user-password').value;
+
+        console.log('Entered username:', username);
+        console.log('Entered password:', password);
+
+        // Check if the entered username and password match the dummy data
+        if (username === dummyData.username && password === dummyData.password) {
             // Redirect to the dashboard page if authentication succeeds
+            console.log('Authentication succeeded. Redirecting to dashboard...');
             window.location.href = 'dashboard.html';
         } else {
             // Display an error message if authentication fails
+            console.log('Authentication failed. Invalid username or password.');
             alert('Invalid username or password. Please try again.');
         }
     });
 });
-           
     </script>
 </body>
 </html>
+
