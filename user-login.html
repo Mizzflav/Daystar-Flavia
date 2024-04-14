@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="daystar.css">
+    <style>
+        /* CSS for centering the login form and background image */
+        body, html {
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('pencil canvas.avif'); /* Replace 'background-image.jpg' with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .login-form {
+            width: 250px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .forgot-password {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Staff</h2>
+        <form id="admin-login-form">
+            <input type="text" id="admin-username" placeholder="Username">
+            <input type="password" id="admin-password" placeholder="Password">
+            <button type="submit">Login</button>
+            <div class="forgot-password">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="daystar.js"></script>
+    <script>
+        // JavaScript code for handling admin login functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('admin-login-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                // Add your admin login logic here
+            });
+        });
+    </script>
+</body>
+</html>
