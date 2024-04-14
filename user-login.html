@@ -46,11 +46,23 @@
     <script>
         // JavaScript code for handling admin login functionality
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('admin-login-form').addEventListener('submit', function(event) {
+            document.getElementById('user-login-form').addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent form submission
-                // Add your admin login logic here
-            });
-        });
+                //adding my dummy data information for authentication
+        var username = document.getElementById('user-username').value;
+        var password = document.getElementById('user-password').value;
+
+        // Simulate authentication with dummy data
+        if (username === 'Flavia' && password === '123456') {
+            // Redirect to the dashboard page if authentication succeeds
+            window.location.href = 'dashboard.html';
+        } else {
+            // Display an error message if authentication fails
+            alert('Invalid username or password. Please try again.');
+        }
+    });
+});
+           
     </script>
 </body>
 </html>

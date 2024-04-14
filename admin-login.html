@@ -48,9 +48,20 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('admin-login-form').addEventListener('submit', function(event) {
                 event.preventDefault(); 
-               
-            });
-        });
+               // Get the values entered by the user
+        var username = document.getElementById('admin-username').value;
+        var password = document.getElementById('admin-password').value;
+
+        // Simulate authentication with dummy data
+        if (username === 'Flavia' && password === '123456') {
+            // Redirect to the dashboard page if authentication succeeds
+            window.location.href = 'dashboard.html';
+        } else {
+            // Display an error message if authentication fails
+            alert('Invalid username or password. Please try again.');
+        }
+    });
+});
     </script>
 </body>
 </html>
