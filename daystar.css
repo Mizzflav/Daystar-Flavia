@@ -1,73 +1,36 @@
-/* Resetting default browser styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Nested container styles */
-.container .inner-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-bottom: 60px; 
-}
-
-header {
+/* Button-like styles */
+button, .button-like {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Green */
+    color: white;
     text-align: center;
-    margin-bottom: 10px;
-}
-
-.logo {
-    max-width: 200px;
-    margin: 0 auto; /* Center the logo horizontally */
-}
-
-
-.hero {
-    background-image: url('Images/istockphoto-1846147045-612x612.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #030303;
-    padding: 100px 0;
-}
-
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.login-buttons {
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
+    text-decoration: none;
     font-size: 16px;
-    background-color: #f03d3d;
-    color: #080808;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin-right: 10px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #555;
+button:hover, .button-like:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.brand h1, .user p, nav ul li a, footer p {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.brand h1:hover, .user p:hover, nav ul li a:hover, footer p:hover {
+    background-color: #0056b3; /* Darker blue */
 }

@@ -1,0 +1,82 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa; /* Light gray */
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Gray */
+}
+
+.brand h1 {
+    margin: 0;
+    color: #333; /* Dark gray */
+}
+
+/* Navbar styles */
+.navbar {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block; /* Center the navbar */
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the spacing between links */
+    position: relative;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333; /* Dark gray */
+    background-color: #007bff; /* Blue */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9; /* Light gray */
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Gray */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0e0e0f; 
+}
+
+footer {
+    background-color: #abc2d8; /* Light gray */
+    padding: 20px;
+    border-top: 1px solid #a18181; /* Gray */
+}

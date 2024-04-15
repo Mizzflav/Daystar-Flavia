@@ -4,39 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="daystar.css">
-   
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('istockphoto-1331844538-612x612.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #c9c1c1; /* Light gray */
+            padding: 10px;
+            border-bottom: 1px solid #ccc; /* Gray */
+        }
+
+        .brand h1 {
+            margin: 0;
+            color: #333; /* Dark gray */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            text-align: center;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            display: inline-block; /* Center the navbar */
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 10px; /* Adjust the spacing between links */
+            position: relative;
+        }
+
+        .navbar a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #e0dcdc; /* Dark gray */
+            background-color: #1d1e1e; /* Blue */
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #f4efef; 
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f5c4c4; /* Light gray */
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd; /* Gray */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #0056b3; /* Darker blue */
+        }
+
+        footer {
+            background-color: #f8f9fa; /* Light gray */
+            padding: 10px;
+            border-top: 1px solid #ccc; /* Gray */
+        }
+    </style>
 </head>
 <body>
     <header>
-     
-        <h1>Dashboard</h1>
+        <div class="brand">
+            <h1>DAYSTAR DAYCARE</h1>
+        </div>
+        <div class="user">
+            <!-- Display logged-in user information here -->
+            <p>Welcome, Admin</p>
+            <button>Logout</button>
+        </div>
     </header>
-<div class="btn-group">
-    <button type="button" class="btn btn-danger">Action</button>
-    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="visually-hidden">Toggle Dropdown</span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div>
-    <main>
-       
-    </main>
-
-    <footer>
-       
-        <p>Contact: 0771123456</p>
-        <p>Email: admin@daystar.edu</p>
-        <p>&copy; 2024 Daystar Daycare</p>
-    </footer>
-
-   
+    <nav class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#">Staff Management</a>
+                <div class="dropdown-content">
+                    <a href="add_staff.html">Add Staff</a>
+                    <a href="edit_staff.html">Edit Staff</a>
+                    <a href="delete_staff.html">Delete Staff</a>
+                </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Babies Management</a>
+              <div class="dropdown-content">
+                  <a href="add_baby.html">Add Baby</a>
+                  <a href="edit_baby.html">Edit Baby</a>
+                  <a href="delete_baby.html">Delete Baby</a>
+              </div>
+          </li>
+          <li class="dropdown">
+              <a href="#">Payments</a>
+              <div class="dropdown-content">
+                  <a href="add_payment.html">Add Payment</a>
+                  <a href="edit_payment.html">Edit Payment</a>
+                  <a href="delete_payment.html">Delete Payment</a>
+              </div>
+                </div>
+            <li class="dropdown">
+                <a href="#">Procurement</a>
+                <div class="dropdown-content">
+                    <a href="add_item.html">Add Item</a>
+                    <a href="edit_item.html">Edit Item</a>
+                    <a href="delete_item.html">Delete Item</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
+
+
 

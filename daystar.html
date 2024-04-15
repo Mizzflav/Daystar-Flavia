@@ -6,43 +6,73 @@
     <title>Daystar Daycare</title>
     <link rel="stylesheet" href="daystar.css">
     <style>
-      /* CSS for styling button links */
-      .login-buttons button {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #333;
-          color: #fff;
-          text-decoration: none; 
-          border: none;
-          cursor: pointer;
-          margin-right: 10px;
-      }
-      .login-buttons button:hover {
-          background-color: #555;
-      }
-  </style>
+        /* CSS for styling button links */
+        .login-buttons button {
+            display: inline-block;
+            padding: 40px 100px; /* Increased padding for larger buttons */
+            background-color: #0e0d0b;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .login-buttons button:hover {
+            background-color: #819198;
+        }
+
+        /* Additional CSS for layout adjustments */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Ensure the container takes full viewport height */
+            justify-content: space-between; /* Align items with space between them */
+        }
+
+        .hero {
+            flex-grow: 1; /* Allow hero section to grow to fill remaining space */
+            display: flex;
+            justify-content: center; /* Center align content horizontally */
+            align-items: center; /* Center align content vertically */
+        }
+
+        .hero-content {
+            text-align: center; /* Center the content */
+        }
+
+        .hero h1 {
+            font-size: 48px; /* Increase font size */
+            margin-bottom: 20px; /* Add some bottom margin */
+        }
+
+        footer {
+            text-align: left; /* Align text to the left */
+            margin: 30px; /* Add some margin for better spacing */
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-        <img src="cef932ed2c244ab089e122348670efd6 (1).png" alt="Daystar Logo" class="logo">
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hello</h1>
-                <div class="login-buttons">
-                    <button onclick="location.href='admin-login.html';">Admin </button>
-                    <button onclick="location.href='user-login.html';">Staff</button>
+<body style="background-image: url('istockphoto-1168722234-612x612.jpg'); background-size: cover; background-position: center;">
+    <div class="container">
+        <header>
+            <img src="cef932ed2c244ab089e122348670efd6 (1).png" alt="Daystar Logo" class="logo">
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Hello</h1>
+                    <div class="login-buttons">
+                        <button onclick="location.href='admin-login.html';">Admin </button>
+                        <button onclick="location.href='user-login.html';">Staff</button>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Contact: 0771123456</p>
-        <p>Email: admin@daystar.edu</p>
-        <p>&copy; 2024 Daystar Daycare</p>
-    </footer>
-  </div> 
+            </section>
+        </main>
+        <footer>
+            
+            <p>&copy; 2024 Daystar Daycare</p>
+        </footer>
+    </div> 
 </body>
 </html>
+
