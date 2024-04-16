@@ -6,52 +6,53 @@ body {
 }
 
 header {
-    background-color: #f8f9fa; /* Light gray */
+    background-color: #f8f9fa; 
     padding: 10px;
-    border-bottom: 1px solid #ccc; /* Gray */
+    border-bottom: 1px solid #ccc; 
 }
 
 .brand h1 {
     margin: 0;
-    color: #333; /* Dark gray */
+    color: #333; 
 }
 
 /* Navbar styles */
 .navbar {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 20px;
 }
 
 .navbar ul {
     list-style-type: none;
     padding: 0;
-    display: inline-block; /* Center the navbar */
+    display: inline-block; 
 }
 
 .navbar li {
     display: inline-block;
-    margin-right: 10px; /* Adjust the spacing between links */
+    margin-right: 10px; 
     position: relative;
 }
+
 
 .navbar a {
     display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
-    color: #333; /* Dark gray */
-    background-color: #007bff; /* Blue */
+    color: #333; 
+    background-color: #007bff; 
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #0056b3; 
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9; /* Light gray */
+    background-color: #f9f9f9; 
     min-width: 160px;
     z-index: 1;
 }
@@ -64,7 +65,7 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd; /* Gray */
+    background-color: #ddd; /* colors keep changing based on my creativity as i go on*/
 }
 
 .dropdown:hover .dropdown-content {
@@ -76,7 +77,7 @@ header {
 }
 
 footer {
-    background-color: #abc2d8; /* Light gray */
+    background-color: #abc2d8; 
     padding: 20px;
-    border-top: 1px solid #a18181; /* Gray */
+    border-top: 1px solid #a18181; 
 }
