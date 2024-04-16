@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+    <style>
+        /* Center the form */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Added background color */
+        }
+        form {
+            width: 80%; /* Adjusted form width */
+            max-width: 600px; /* Added max-width */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff; /* Changed background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+        h3 {
+            font-family: Calibri;
+            font-size: 25pt;
+            font-weight: bold;
+            color: SlateBlue;
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 20px; /* Added margin bottom */
+        }
+        table {
+            font-family: Calibri;
+            color: white;
+            font-size: 11pt;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(122, 122, 171);
+            border-collapse: collapse;
+            border: 2px solid navy;
+            width: 100%; /* Added width */
+            margin-bottom: 20px; /* Added margin bottom */
+        }
+        table.inner {
+            border: 0px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: calc(100% - 20px); /* Adjusted width */
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"],
+        button {
+            width: 100%;
+            padding: 8px 0;
+            background-color: #5f5580;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="add_staff.php" method="POST">
+        <table align="center" cellpadding="10">
+            <tr>
+                <td>FIRST NAME</td>
+                <td><input type="text" name="First_Name" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <td><input type="text" name="Last_Name" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH</td>
+                <td><input type="date" name="Date_of_Birth" required></td>
+            </tr>
+            <tr>
+                <td>GENDER</td>
+                <td>
+                    <select name="Gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>NEXT OF KIN</td>
+                <td><input type="text" name="Next_of_Kin" required></td>
+            </tr>
+            <tr>
+                <td>NATIONAL IDENTIFICATION NUMBER (NIN)</td>
+                <td><input type="text" name="NIN" required></td>
+            </tr>
+            <tr>
+                <td>ROLE</td>
+                <td>
+                    <select name="Role" required>
+                        <option value="sitter">Sitter</option>
+                        <option value="accountant">Accountant</option>
+                        <option value="admin">Admin</option>
+                        <option value="security">Security</option>
+                        <option value="support">Support</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>LEVEL OF EDUCATION</td>
+                <td><input type="text" name="Education_Level" required></td>
+            </tr>
+            <tr>
+                <td>CONTACTS</td>
+                <td><input type="text" name="Contacts" required></td>
+            </tr>
+        </table>
+        <input type="submit" value="Add Staff">
+        <button onclick="location.href='dashboard.html';" type="button">Back to Dashboard</button>
+    </form>
+</body>
+</html>
